@@ -124,17 +124,6 @@ abstract class BusinessService
         if (in_array($model->status, $this->actual_statuses)) {
             $model->update(['is_actual' => true]);
         }
-//        else if (!in_array($model->status, $this->back_statuses)) {
-//            $actual_model = $model->where('parent_id', $model->parent_id)
-//                ->where('parent_type', $model->parent_type)
-//                ->where(function ($builder) {
-//                    $builder->whereIn('status', $this->actual_statuses);
-//                })
-//                ->orderBy('id', 'desc')
-//                ->first();
-//
-//            $actual_model?->update(['is_actual' => true]);
-//        }
     }
 
     /**
